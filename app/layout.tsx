@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Discover the work and accomplishments of Roshan Dahal in the field of engineering.",
     images: [
       {
-        url: "https://pbs.twimg.com/profile_images/1798757747619725312/FZAw-qX0_400x400.jpg",
+        url: "https://pbs.twimg.com/profile_images/roshan",
         alt: "Roshan Dahal's Portfolio"
       }
     ]
