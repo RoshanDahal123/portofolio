@@ -226,7 +226,7 @@ export function ProjectsSection() {
                   <img
                     src={selectedProject.image || "/placeholder.svg"}
                     alt={selectedProject.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-[400px] object-cover"
                   />
                   <Button
                     variant="outline"
