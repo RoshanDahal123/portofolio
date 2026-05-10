@@ -19,7 +19,7 @@ interface Project {
   githubFrontendUrl: string
   githubBackendUrl?:string
   demoUrl: string
-  category: string
+  
 }
 
 export function ProjectsSection() {
@@ -37,7 +37,7 @@ export function ProjectsSection() {
       githubFrontendUrl: "https://github.com/RoshanDahal123/DigitalDokanFrontEnd",
       githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
       demoUrl: "https://digital-dokan-front-end.vercel.app/",
-      category: "Full Stack",
+     
     },
     {
       id: 2,
@@ -50,7 +50,7 @@ export function ProjectsSection() {
       githubFrontendUrl: "https://github.com/pawandai/stock-price-prediction",
       // githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
       demoUrl: "https://github.com/pawandai/stock-price-prediction",
-      category: "Machine Learning",
+     
     },
     {
       id: 3,
@@ -63,7 +63,7 @@ export function ProjectsSection() {
       githubFrontendUrl: "https://github.com/BEI078/autonomous-navigation-bot",
       // githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
       demoUrl: "https://github.com/BEI078/autonomous-navigation-bot",
-      category: "Reinforcement Learning",
+      
     },
     {
   id: 4, 
@@ -75,7 +75,7 @@ export function ProjectsSection() {
   technologies: ["Next.js", "React", "Tailwind CSS", "MongoDB", "NextAuth", "Resend"],
   githubFrontendUrl: "https://github.com/RoshanDahal123/TrueFeedback", // Update with your actual repo URL
   demoUrl: "https://true-feedback-blush.vercel.app/", // Update with your live deployment URL
-  category: "Full-Stack Web Development",
+  
 }
   ]
 
@@ -132,7 +132,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-20">
-     {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-50/30 to-purple-100/30 dark:from-purple-900/20 dark:to-purple-800/20 z-[98]" />*/}
+      
 
       <div className="container mx-auto px-4 relative">
         <motion.div
@@ -160,19 +160,19 @@ export function ProjectsSection() {
           {projects.map((project) => (
             <motion.div key={project.id} variants={itemVariants} whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
               <Card
-                className="group bg-white/70 dark:bg-gray-800/70 border-purple-200 dark:border-purple-700 hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden h-full"
+                className="group relative bg-white/70 dark:bg-gray-800/70 border-purple-200 dark:border-purple-700 hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden h-full"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="overflow-hidden">
+                <div className="relative overflow-hidden">
                   <motion.img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-[400px] object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <Badge className="absolute top-4 right-4 bg-purple-600 text-white">{project.category}</Badge>
+                 
                 </div>
 
                 <CardContent className="p-6">
@@ -241,7 +241,7 @@ export function ProjectsSection() {
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-200">{selectedProject.title}</h3>
-                    <Badge className="bg-purple-600 text-white">{selectedProject.category}</Badge>
+ 
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
