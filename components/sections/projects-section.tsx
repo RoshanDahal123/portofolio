@@ -16,7 +16,8 @@ interface Project {
   fullDescription: string
   image: string
   technologies: string[]
-  githubUrl: string
+  githubFrontendUrl: string
+  githubBackendUrl?:string
   demoUrl: string
   category: string
 }
@@ -30,14 +31,52 @@ export function ProjectsSection() {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React and Node.js",
       fullDescription:
-        "A comprehensive e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, payment integration with Stripe, order management, and admin dashboard. The application is fully responsive and optimized for performance.",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      githubUrl: "https://github.com/johndoe/ecommerce",
-      demoUrl: "https://ecommerce-demo.com",
+        "A comprehensive e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, payment integration with Khalti, order management, and admin dashboard. The application is fully responsive and optimized for performance.",
+      image: "/images/ecommerce.png?height=300&width=400",
+      technologies: ["React", "Node.js", "PostgreSQL", "Khalti", "Tailwind CSS"],
+      githubFrontendUrl: "https://github.com/RoshanDahal123/DigitalDokanFrontEnd",
+      githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
+      demoUrl: "https://digital-dokan-front-end.vercel.app/",
       category: "Full Stack",
     },
-    
+    {
+      id: 2,
+      title: "Stock Price Prediction",
+      description: "Predicting stock prices using LSTM and sentiment analysis",
+      fullDescription:
+        "This research project aims to predict stock prices for select companies by combining historical financial data with sentiment analysis derived from news headlines. Leveraging a Long Short-Term Memory (LSTM) neural network and natural language processing (NLP), the application forecasts the next day's closing price while providing insights into model performance through error metrics and visualizations",
+      image: "/images/StockPrice.jpeg?height=300&width=400",
+      technologies: ["Data Scraping","Deep Learning", "LSTM", "NLP"],
+      githubFrontendUrl: "https://github.com/pawandai/stock-price-prediction",
+      // githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
+      demoUrl: "https://github.com/pawandai/stock-price-prediction",
+      category: "Machine Learning",
+    },
+    {
+      id: 3,
+      title: "Autonomous Navigation with Deep-Learning",
+      description: "Developing an autonomous navigation system using deep Q-learning algorithms",
+      fullDescription:
+        "This research project aims to development a simulation of an autonomous navigation bot using Deep Q Learning (DQL) that can navigate through unknown indoor environments while avoiding obstacles and reaching designated goals.",
+      image: "/images/autonomous.png?height=300&width=400",
+      technologies: ["DQL","Simulation", "Python", "ROS2"],
+      githubFrontendUrl: "https://github.com/BEI078/autonomous-navigation-bot",
+      // githubBackendUrl:"https://github.com/RoshanDahal123/MERN-DigitalDhokanProject",
+      demoUrl: "https://github.com/BEI078/autonomous-navigation-bot",
+      category: "Reinforcement Learning",
+    },
+    {
+  id: 4, 
+  title: "TrueFeedback",
+  description: "An anonymous messaging platform that allows users to receive honest feedback.",
+  fullDescription:
+    "A full-stack web application built with Next.js that enables users to create a unique profile link and receive anonymous messages securely. Key features include JWT-based authentication via NextAuth, email OTP verification with Resend, a personalized dashboard to manage messages, AI-powered message suggestions, and a fully responsive UI built with Tailwind CSS and shadcn/ui.",
+  image: "/images/true_feedback.png?height=300&width=400", // Update with your actual image path
+  technologies: ["Next.js", "React", "Tailwind CSS", "MongoDB", "NextAuth", "Resend"],
+  githubFrontendUrl: "https://github.com/RoshanDahal123/TrueFeedback", // Update with your actual repo URL
+  demoUrl: "https://true-feedback-blush.vercel.app/", // Update with your live deployment URL
+  category: "Full-Stack Web Development",
+}
   ]
 
   // Handle ESC key press
@@ -228,11 +267,20 @@ export function ProjectsSection() {
                       </a>
                     </Button>
                     <Button variant="outline" asChild>
-                      <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={selectedProject.githubFrontendUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
                         View Code
                       </a>
+                     
                     </Button>
+                    {selectedProject.githubBackendUrl && (
+                      <Button variant="outline" asChild>
+                        <a href={selectedProject.githubBackendUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="mr-2 h-4 w-4" />
+                          Backend Code
+                        </a>
+                      </Button>
+                    )}
                   </div>
 
                   <div className="mt-6 text-sm text-gray-500 dark:text-gray-400 text-center">

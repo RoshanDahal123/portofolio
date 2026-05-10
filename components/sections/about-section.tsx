@@ -92,8 +92,8 @@ export function AboutSection() {
               I'm constantly iterating on my craft, whether it's optimizing code, designing user experiences.
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or sharing my knowledge through blog posts and mentoring.
+                I believe in the power of technology to transform lives and I'm excited to be a part of that journey. 
+                With a background in computer science and a keen interest in emerging technologies, I approach each project with curiosity and dedication
               </p>
             </div>
 

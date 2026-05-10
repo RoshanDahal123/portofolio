@@ -11,7 +11,7 @@ export function HomeSection() {
   const downloadCV = async () => {
     try {
       // Fetch the CV file from public folder
-      const response = await fetch("/Fake-Resume.pdf") // Replace with your actual CV filename
+      const response = await fetch("./CV.pdf") // Replace with your actual CV filename
       
       if (!response.ok) {
         throw new Error("CV file not found")
@@ -21,7 +21,7 @@ export function HomeSection() {
       const url = window.URL.createObjectURL(blob)
       const link = document.createElement("a")
       link.href = url
-      link.download = "Resume.pdf" 
+      link.download = "Roshan_Dahal_CV.pdf" 
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
